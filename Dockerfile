@@ -21,9 +21,7 @@ RUN unzip /opt/jodconverter-core-3.0-beta-4-dist.zip && \
 RUN ln -s jodconverter-core-3.0-beta-4 jod
 
 # openmeetings itself
-ADD apache-openmeetings-3.0.0.tar.gz /opt/apache-openmeetings-3.0.0
-WORKDIR /opt
-RUN ln -s apache-openmeetings-3.0.0 apache-openmeetings
+ADD apache-openmeetings.tar.gz /opt/apache-openmeetings
 WORKDIR /opt/apache-openmeetings
 
 # run
