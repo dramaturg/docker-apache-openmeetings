@@ -1,0 +1,15 @@
+
+[Unit]
+Description=Apache OpenMeetings
+After=basic.target
+
+[Service]
+Environment=RED5_HOME=/opt/apache-openmeetings
+WorkingDirectory=/opt/apache-openmeetings
+ExecStart=/opt/apache-openmeetings/red5.sh
+ExecStop=/opt/apache-openmeetings/red5-shutdown.sh
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+
