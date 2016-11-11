@@ -1,5 +1,5 @@
 
-VERSION = 3.1.1
+VERSION = 3.1.3
 
 all: apache-openmeetings.tar.gz
 	docker build -t dramaturg/apache-openmeetings .
