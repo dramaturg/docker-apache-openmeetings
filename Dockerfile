@@ -4,9 +4,10 @@ MAINTAINER Sebastian Krohn <seb@gaia.sunn.de>
 
 # dependencies
 RUN rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro && \
-    rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
+    rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 RUN yum -y update && \
     yum -y install git java-1.8.0-openjdk ImageMagick ghostscript libreoffice ffmpeg fftw-libs zziplib sox && \
+    ln -s /usr/lib64/libreoffice /usr/lib/libreoffice && \
     rpm -Uvh ftp://fr2.rpmfind.net/linux/dag/redhat/el6/en/x86_64/dag/RPMS/swftools-0.9.1-1.el6.rf.x86_64.rpm && \
     yum -y clean all
 
